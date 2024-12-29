@@ -35,8 +35,585 @@
   box-sizing: border-box;
 }
 body {
-  background: var(--light-light);
+  background: var(--light-medium);
   color: var(--dark-light);
   font-family: "Work Sans", sans-serif;
   font-size: 14px;
+}
+/*****************************************************************************************
+                                        Contenedores
+*****************************************************************************************/
+.contenedor {
+  width: 98%;
+  margin: 12px auto;
+}
+/*****************************************************************************************
+                                        Grid
+*****************************************************************************************/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+}
+.grid > * {
+  overflow: hidden;
+}
+/*****************************************************************************************
+                                        Default
+*****************************************************************************************/
+.col-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+.col-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.col-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.col-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.col-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+.col-7 {
+  grid-template-columns: repeat(7, 1fr);
+}
+.col-8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+.col-9 {
+  grid-template-columns: repeat(9, 1fr);
+}
+.col-10 {
+  grid-template-columns: repeat(10, 1fr);
+}
+.col-11 {
+  grid-template-columns: repeat(11, 1fr);
+}
+.col-12 {
+  grid-template-columns: repeat(12, 1fr);
+}
+.span-1 {
+  grid-column: span 1;
+}
+.span-2 {
+  grid-column: span 2;
+}
+.span-3 {
+  grid-column: span 3;
+}
+.span-4 {
+  grid-column: span 4;
+}
+.span-5 {
+  grid-column: span 5;
+}
+.span-6 {
+  grid-column: span 6;
+}
+.span-7 {
+  grid-column: span 7;
+}
+.span-8 {
+  grid-column: span 8;
+}
+.span-9 {
+  grid-column: span 9;
+}
+.span-10 {
+  grid-column: span 10;
+}
+.span-11 {
+  grid-column: span 11;
+}
+.span-12 {
+  grid-column: span 12;
+}
+/*****************************************************************************************
+                                Media query <= 992px
+*****************************************************************************************/
+@media screen and (min-width: 992px) {
+  .col-lg-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .col-lg-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .col-lg-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .co-lg-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .col-lg-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .col-lg-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .col-lg-7 {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .col-lg-8 {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .col-lg-9 {
+    grid-template-columns: repeat(9, 1fr);
+  }
+  .col-lg-10 {
+    grid-template-columns: repeat(10, 1fr);
+  }
+  .col-lg-11 {
+    grid-template-columns: repeat(11, 1fr);
+  }
+  .col-lg-12 {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .span-lg-1 {
+    grid-column: span 1;
+  }
+  .span-lg-2 {
+    grid-column: span 2;
+  }
+  .span-lg-3 {
+    grid-column: span 3;
+  }
+  .span-lg-4 {
+    grid-column: span 4;
+  }
+  .span-lg-5 {
+    grid-column: span 5;
+  }
+  .span-lg-6 {
+    grid-column: span 6;
+  }
+  .span-lg-7 {
+    grid-column: span 7;
+  }
+  .span-lg-8 {
+    grid-column: span 8;
+  }
+  .span-lg-9 {
+    grid-column: span 9;
+  }
+  .span-lg-10 {
+    grid-column: span 10;
+  }
+  .span-lg-11 {
+    grid-column: span 11;
+  }
+  .span-lg-12 {
+    grid-column: span 12;
+  }
+}
+/*****************************************************************************************
+                                Media query <= 768px 
+*****************************************************************************************/
+@media screen and (min-width: 768px) {
+  .caja {
+    font-size: 12px !important;
+  }
+  .card {
+    font-size: 12px !important;
+  }
+  .dropbtn,
+  .btn {
+    max-width: 130px;
+  }
+  .dropdown-content {
+    max-width: 130px;
+  }
+  .container {
+    max-width: 760px;
+  }
+  .col-md-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .col-md-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .col-md-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .col-md-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .col-md-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .col-md-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .col-md-7 {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .col-md-8 {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .col-md-9 {
+    grid-template-columns: repeat(9, 1fr);
+  }
+  .col-md-10 {
+    grid-template-columns: repeat(10, 1fr);
+  }
+  .col-md-11 {
+    grid-template-columns: repeat(11, 1fr);
+  }
+  .col-md-12 {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .span-md-1 {
+    grid-column: span 1;
+  }
+  .span-md-2 {
+    grid-column: span 2;
+  }
+  .span-md-3 {
+    grid-column: span 3;
+  }
+  .span-md-4 {
+    grid-column: span 4;
+  }
+  .span-md-5 {
+    grid-column: span 5;
+  }
+  .span-md-6 {
+    grid-column: span 6;
+  }
+  .span-md-7 {
+    grid-column: span 7;
+  }
+  .span-md-8 {
+    grid-column: span 8;
+  }
+  .span-md-9 {
+    grid-column: span 9;
+  }
+  .span-md-10 {
+    grid-column: span 10;
+  }
+  .span-md-11 {
+    grid-column: span 11;
+  }
+  .span-md-12 {
+    grid-column: span 12;
+  }
+}
+/*****************************************************************************************
+                                Media query <= 576px
+*****************************************************************************************/
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+  .col-sm-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .col-sm-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .col-sm-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .col-sm-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .col-sm-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .col-sm-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .col-sm-7 {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .col-sm-8 {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .col-sm-9 {
+    grid-template-columns: repeat(9, 1fr);
+  }
+  .col-sm-10 {
+    grid-template-columns: repeat(10, 1fr);
+  }
+  .col-sm-11 {
+    grid-template-columns: repeat(11, 1fr);
+  }
+  .col-sm-12 {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .span-sm-1 {
+    grid-column: span 1;
+  }
+  .span-sm-2 {
+    grid-column: span 2;
+  }
+  .span-sm-3 {
+    grid-column: span 3;
+  }
+  .span-sm-4 {
+    grid-column: span 4;
+  }
+  .span-sm-5 {
+    grid-column: span 5;
+  }
+  .span-sm-6 {
+    grid-column: span 6;
+  }
+  .span-sm-7 {
+    grid-column: span 7;
+  }
+  .span-sm-8 {
+    grid-column: span 8;
+  }
+  .span-sm-9 {
+    grid-column: span 9;
+  }
+  .span-sm-10 {
+    grid-column: span 10;
+  }
+  .span-sm-11 {
+    grid-column: span 11;
+  }
+  .span-sm-12 {
+    grid-column: span 12;
+  }
+}
+/*****************************************************************************************
+                                        Plantilla
+*****************************************************************************************/
+.header {
+  border: 3px solid var(--blue-hard);
+  background: var(--blue-light);
+}
+.nav {
+  border: 3px solid var(--green-hard);
+  background: var(--green-light);
+}
+.contenido {
+  border: 3px solid var(--purple-hard);
+  background: var(--purple-light);
+}
+.lateral {
+  border: 3px solid var(--aqua-hard);
+  background: var(--aqua-light);
+}
+.footer {
+  border: 3px solid var(--red-hard);
+  background: var(--red-light);
+}
+/*****************************************************************************************
+                                        Componentes
+*****************************************************************************************/
+/***************************
+            Card
+***************************/
+.linea {
+  width: 100%;
+  padding: 5px;
+  background: var(--danger);
+  border-radius: 3px;
+  box-shadow: 2px 2px 10px #ddd;
+  color: var(--light);
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 2px 2px 10px rgba(124,111,106,0.3);
+}
+/***************************
+            Card
+***************************/
+.card {
+  width: 100%;
+  padding: 15px;
+  background: var(--light-light);
+  border-radius: 3px;
+  box-shadow: 2px 2px 10px rgba(124,111,106,0.3);
+}
+/***************************
+            Card
+***************************/
+.caja {
+  width: 100%;
+  padding: 15px;
+  background: var(--blue-light);
+  font-size: 14px;
+  font-weight: bold;
+}
+/*****************************************************************************************
+                                        Helpers
+******************************************************************************************/
+/***************************
+            Backgound
+***************************/
+.bg-blue-light {
+  background: var(--blue-light);
+}
+.bg-blue-medium {
+  background: var(--blue-medium);
+}
+.bg-blue-hard {
+  background: var(--blue-hard);
+}
+.bg-red-light {
+  background: var(--red-light);
+}
+.bg-red-medium {
+  background: var(--red-medium);
+}
+.bg-red-hard {
+  background: var(--red-hard);
+}
+.bg-green-light {
+  background: var(--green-light);
+}
+.bg-green-medium {
+  background: var(--green-medium);
+}
+.bg-green-hard {
+  background: var(--green-hard);
+}
+.bg-orange-light {
+  background: var(--orange-light);
+}
+.bg-orange-medium {
+  background: var(--orange-medium);
+}
+.bg-orange-hard {
+  background: var(--orange-hard);
+}
+.bg-purple-light {
+  background: var(--purple-light);
+}
+.bg-purple-medium {
+  background: var(--purple-medium);
+}
+.bg-purple-hard {
+  background: var(--purple-hard);
+}
+.bg-aqua-light {
+  background: var(--aqua-light);
+}
+.bg-aqua-medium {
+  background: var(--aqua-medium);
+}
+.bg-aqua-hard {
+  background: var(--aqua-hard);
+}
+.bg-dark-light {
+  background: var(--dark-light);
+}
+.bg-dark-medium {
+  background: var(--dark-medium);
+}
+.bg-dark-hard {
+  background: var(--dark-hard);
+}
+.bg-light-light {
+  background: var(--light-light);
+}
+.bg-light-medium {
+  background: var(--light-medium);
+}
+.bg-light-hard {
+  background: var(--light-hard);
+}
+.bg-gray-light {
+  background: var(--gray-light);
+}
+.bg-gray-medium {
+  background: var(--gray-medium);
+}
+.bg-gray-hard {
+  background: var(--gray-hard);
+}
+/***************************
+            Text color
+***************************/
+.text-blue-light {
+  color: var(--blue-light);
+}
+.text-blue-medium {
+  color: var(--blue-medium);
+}
+.text-blue-hard {
+  color: var(--blue-hard);
+}
+.text-red-light {
+  color: var(--red-light);
+}
+.text-red-medium {
+  color: var(--red-medium);
+}
+.text-red-hard {
+  color: var(--red-hard);
+}
+.text-green-light {
+  color: var(--green-light);
+}
+.text-green-medium {
+  color: var(--green-medium);
+}
+.text-green-hard {
+  color: var(--green-hard);
+}
+.text-orange-light {
+  color: var(--orange-light);
+}
+.text-orange-medium {
+  color: var(--orange-medium);
+}
+.text-orange-hard {
+  color: var(--orange-hard);
+}
+.text-purple-light {
+  color: var(--purple-light);
+}
+.text-purple-medium {
+  color: var(--purple-medium);
+}
+.text-purple-hard {
+  color: var(--purple-hard);
+}
+.text-aqua-light {
+  color: var(--aqua-light);
+}
+.text-aqua-medium {
+  color: var(--aqua-medium);
+}
+.text-aqua-hard {
+  color: var(--aqua-hard);
+}
+.text-dark-light {
+  color: var(--dark-light);
+}
+.text-dark-medium {
+  color: var(--dark-medium);
+}
+.text-dark-hard {
+  color: var(--dark-hard);
+}
+.text-light-light {
+  color: var(--light-light) !important;
+}
+.text-light-medium {
+  color: var(--light-medium);
+}
+.text-light-hard {
+  color: var(--light-hard);
+}
+.text-gray-light {
+  color: var(--gray-light);
+}
+.text-gray-medium {
+  color: var(--gray-medium);
+}
+.text-gray-hard {
+  color: var(--gray-hard);
+}
+.text-bold {
+  font-weight: bold;
 }

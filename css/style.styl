@@ -162,18 +162,15 @@ body
 /*****************************************************************************************
                                 Media query <= 768px 
 *****************************************************************************************/
-@media screen and (min-width:768px)
+@media screen and (min-width:800px)
     .caja
-        font-size: 12px !important
+        padding 8px !important
+        font-size: 11px !important
     .card
         font-size: 12px !important
-    .dropbtn, .btn 
-        max-width: 130px
     .dropdown 
         &-content
             max-width: 130px
-    .container
-        max-width: 760px;
     .col-md-1
         grid-template-columns: repeat(1,1fr)
     .col-md-2
@@ -222,12 +219,16 @@ body
         grid-column: span 11
     .span-md-12
         grid-column: span 12
+    nav
+        padding-left: 20px
+        & ul 
+            & li 
+                & a 
+                    font-size: 16px !important
 /*****************************************************************************************
                                 Media query <= 576px
 *****************************************************************************************/
-@media screen and (max-width:576px)
-    .container
-        max-width: 540px;
+@media screen and (max-width:700px)
     .col-sm-1
         grid-template-columns: repeat(1,1fr)
     .col-sm-2
@@ -276,29 +277,80 @@ body
         grid-column: span 11
     .span-sm-12
         grid-column: span 12
-/*****************************************************************************************
-                                        Plantilla
-*****************************************************************************************/
-.header
-    border: 3px solid var(--blue-hard)
-    background: var(--blue-light)
-.nav
-    border: 3px solid var(--green-hard)
-    background: var(--green-light)
-.contenido
-    border: 3px solid var(--purple-hard)
-    background: var(--purple-light)
-.lateral
-    border: 3px solid var(--aqua-hard)
-    background: var(--aqua-light)
-.footer
-    border: 3px solid var(--red-hard)
-    background: var(--red-light)
+    .check-menu
+        display block !important
+    ul 
+        position: fixed
+        width 100%
+        height 100vh
+        background: rgba(66,123,88,0.95)
+        top 80px
+        left: 100%
+        text-align: center
+        transition: all 0.6s
+    nav
+        & ul 
+            & li 
+                display: block !important
+                line-height: 30px
+                & a 
+                    font-size: 14px !important
+                    &:hover
+                    &.active-aqua
+                        background:var(--aqua-medium)  
+    #check:checked ~ ul
+        left: 0     
 /*****************************************************************************************
                                         Componentes
 *****************************************************************************************/
 /***************************
-            Card
+            Nav
+***************************/
+nav
+    top 0
+    position: fixed
+    height: 80px
+    width 100%
+    background: var(--aqua-hard)
+    & ul
+        float: right 
+        margin-right: 20px
+        & li
+            display inline
+            line-height: 80px
+            margin 0 15px
+            & a 
+                color:var(--light-medium)
+                font-size: 18px
+                padding: 25px 15px
+                border-radius: 1.5px
+                text-transform: uppercase
+li
+    & a
+        &:hover
+        &.active-aqua
+            background:var(--aqua-medium)          
+
+#check
+    display: none
+.inicio
+    position: absolute
+    padding: 20px 50px
+.logo
+    height: 40px
+.check-menu
+    font-size: 30px
+    color var(--light-light)
+    float: right
+    line-height: 80px
+    margin-right: 20px
+    cursor pointer
+    display: none
+#check
+    display: non
+
+/***************************
+            Linea
 ***************************/
 .linea
     width 100%
@@ -320,7 +372,7 @@ body
     border-radius: 3px
     box-shadow: 2px 2px 10px rgba(124, 111, 106,0.3)
 /***************************
-            Card
+            Caja
 ***************************/
 .caja
     width 100%
@@ -328,6 +380,143 @@ body
     background: var(--blue-light)
     font-size: 14px
     font-weight: bold
+/***************************
+            Btn
+***************************/
+.dropbtn, .btn 
+    width 100%
+    cursor: pointer
+    color: #fff 
+    padding: 10px
+    transition: .3s ease all
+    &-blue
+        background: var(--blue-light)
+        border: 2px solid var(--blue-light)
+        &:hover
+            background: var(--blue-hard)
+            border: 2px solid var(--blue-medium)
+            color: var(--blue-light)
+    &-red
+        background: var(--red-medium)
+        border: 2px solid var(--red-light)
+        &:hover
+            background: var(--red-hard)
+            border: 2px solid var(--red-medium)
+            color: var(--red-light)
+    &-green
+        background: var(--green-medium)
+        border: 2px solid var(--green-light)
+        &:hover
+            background: var(--green-hard)
+            border: 2px solid var(--green-medium)
+            color: var(--green-light)
+    &-orange
+        background: var(--orange-medium)
+        border: 2px solid var(--orange-light)
+        &:hover
+            background: var(--orange-hard)
+            border: 2px solid var(--orange-medium)
+            color: var(--orange-light)
+    &-purple
+        background: var(--purple-medium)
+        border: 2px solid var(--purple-light)
+        &:hover
+            background: var(--purple-hard)
+            border: 2px solid var(--purple-medium)
+            color: var(--purple-light)
+    &-aqua
+        background: var(--aqua-medium)
+        border: 2px solid var(--aqua-light)
+        &:hover
+            background: var(--aqua-hard)
+            border: 2px solid var(--aqua-medium)
+            color: var(--aqua-light)
+    &-dark
+        background: var(--dark-medium)
+        border: 2px solid var(--dark-light)
+        &:hover
+            background: var(--dark-hard)
+            border: 2px solid var(--gray-medium)
+            color: var(--gray-light)
+    &-light
+        background: var(--light-medium)
+        border: 2px solid var(--light-light)
+        &:hover
+            background: var(--light-hard)
+            border: 2px solid var(--gray-medium)
+            color: var(--gray-medium)
+    &-gray
+        background: var(--gray-medium)
+        border: 2px solid var(--gray-light)
+        &:hover
+            background: var(--gray-hard)
+            border: 2px solid var(--dark-medium)
+            color: var(--gray-light)
+.dropdown 
+    float: left;
+    overflow: hidden;
+    &-content
+        background: var(--light-light)
+        display: none
+        position: absolute
+        z-index 1
+        margin-top: 40px
+        width 150px
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+        & > * 
+            float: none
+            padding: 12px 16px
+            display: block
+            text-decoration: none
+            color: var(--dark)
+    &:hover .dropdown-content
+        display: block
+.drop 
+    &-blue
+        & a:hover
+            background: var(--blue-hard)
+            border: 2px solid var(--blue-medium)
+            color: var(--blue-light)
+    &-red
+        & a:hover
+            background: var(--red-hard)
+            border: 2px solid var(--red-medium)
+            color: var(--red-light)
+    &-green
+        & a:hover
+            background: var(--green-hard)
+            border: 2px solid var(--green-medium)
+            color: var(--green-light)
+    &-orange
+        & a:hover
+            background: var(--orange-hard)
+            border: 2px solid var(--orange-medium)
+            color: var(--orange-light)
+    &-purple
+        & a:hover
+            background: var(--purple-hard)
+            border: 2px solid var(--purple-medium)
+            color: var(--purple-light)
+    &-aqua
+        & a:hover
+            background: var(--aqua-hard)
+            border: 2px solid var(--aqua-medium)
+            color: var(--aqua-light)
+    &-dark
+        & a:hover
+            background: var(--dark-hard)
+            border: 2px solid var(--gray-medium)
+            color: var(--gray-light)
+    &-light
+        & a:hover
+            background: var(--light-hard)
+            border: 2px solid var(--gray-medium)
+            color: var(--gray-medium)
+    &-gray
+        & a:hover
+            background: var(--gray-hard)
+            border: 2px solid var(--dark-medium)
+            color: var(--gray-light)
 /*****************************************************************************************
                                         Helpers
 ******************************************************************************************/
@@ -385,8 +574,7 @@ body
         &-hard
             background: var(--dark-hard)
     &-light
-        &-light
-            background: var(--light-light)
+        background: var(--light-light)
         &-medium
             background: var(--light-medium)
         &-hard
@@ -452,8 +640,7 @@ body
         &-hard
             color: var(--dark-hard)
     &-light
-        &-light
-            color: var(--light-light) !important
+        color: var(--light-light) !important
         &-medium
             color: var(--light-medium)
         &-hard
@@ -467,4 +654,40 @@ body
             color: var(--gray-hard)
     &-bold
         font-weight: bold
-    
+/***************************
+            Margins
+***************************/
+.margin
+    &-left
+        margin-left: 15px
+    &-right
+        margin-right: 15px
+    &-bottom
+        margin-bottom: 15px
+    &-top 
+        margin-top: 15px
+    &-top-lg
+        margin-top: 95px
+/***************************
+            Interlineado
+***************************/
+.inter-3
+    line-height: 3px !important
+.inter-4
+    line-height: 4px !important
+.inter-5
+    line-height: 4px !important
+.inter-lg
+    line-height: 20px !important
+/***************************
+            HR
+***************************/
+hr 
+    border:none
+    height: 20px
+    width: 98%
+    height: 50px
+    margin-top: 0
+    border-bottom: 1px solid var(--gray-light)
+    box-shadow: 0 10px 10px -15px #333
+    margin: -50px auto 10px 

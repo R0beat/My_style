@@ -213,22 +213,16 @@ body {
 /*****************************************************************************************
                                 Media query <= 768px 
 *****************************************************************************************/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   .caja {
-    font-size: 12px !important;
+    padding: 8px !important;
+    font-size: 11px !important;
   }
   .card {
     font-size: 12px !important;
   }
-  .dropbtn,
-  .btn {
-    max-width: 130px;
-  }
   .dropdown-content {
     max-width: 130px;
-  }
-  .container {
-    max-width: 760px;
   }
   .col-md-1 {
     grid-template-columns: repeat(1, 1fr);
@@ -302,14 +296,17 @@ body {
   .span-md-12 {
     grid-column: span 12;
   }
+  nav {
+    padding-left: 20px;
+  }
+  nav ul li a {
+    font-size: 16px !important;
+  }
 }
 /*****************************************************************************************
                                 Media query <= 576px
 *****************************************************************************************/
-@media screen and (max-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
+@media screen and (max-width: 700px) {
   .col-sm-1 {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -382,35 +379,91 @@ body {
   .span-sm-12 {
     grid-column: span 12;
   }
-}
-/*****************************************************************************************
-                                        Plantilla
-*****************************************************************************************/
-.header {
-  border: 3px solid var(--blue-hard);
-  background: var(--blue-light);
-}
-.nav {
-  border: 3px solid var(--green-hard);
-  background: var(--green-light);
-}
-.contenido {
-  border: 3px solid var(--purple-hard);
-  background: var(--purple-light);
-}
-.lateral {
-  border: 3px solid var(--aqua-hard);
-  background: var(--aqua-light);
-}
-.footer {
-  border: 3px solid var(--red-hard);
-  background: var(--red-light);
+  .check-menu {
+    display: block !important;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(66,123,88,0.95);
+    top: 80px;
+    left: 100%;
+    text-align: center;
+    transition: all 0.6s;
+  }
+  nav ul li {
+    display: block !important;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 14px !important;
+  }
+  nav ul li a:hover,
+  nav ul li a.active-aqua {
+    background: var(--aqua-medium);
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
 }
 /*****************************************************************************************
                                         Componentes
 *****************************************************************************************/
 /***************************
-            Card
+            Nav
+***************************/
+nav {
+  top: 0;
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  background: var(--aqua-hard);
+}
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+nav ul li {
+  display: inline;
+  line-height: 80px;
+  margin: 0 15px;
+}
+nav ul li a {
+  color: var(--light-medium);
+  font-size: 18px;
+  padding: 25px 15px;
+  border-radius: 1.5px;
+  text-transform: uppercase;
+}
+li a:hover,
+li a.active-aqua {
+  background: var(--aqua-medium);
+}
+#check {
+  display: none;
+}
+.inicio {
+  position: absolute;
+  padding: 20px 50px;
+}
+.logo {
+  height: 40px;
+}
+.check-menu {
+  font-size: 30px;
+  color: var(--light-light);
+  float: right;
+  line-height: 80px;
+  margin-right: 20px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: non;
+}
+/***************************
+            Linea
 ***************************/
 .linea {
   width: 100%;
@@ -434,7 +487,7 @@ body {
   box-shadow: 2px 2px 10px rgba(124,111,106,0.3);
 }
 /***************************
-            Card
+            Caja
 ***************************/
 .caja {
   width: 100%;
@@ -442,6 +495,184 @@ body {
   background: var(--blue-light);
   font-size: 14px;
   font-weight: bold;
+}
+/***************************
+            Btn
+***************************/
+.dropbtn,
+.btn {
+  width: 100%;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px;
+  transition: 0.3s ease all;
+}
+.dropbtn-blue,
+.btn-blue {
+  background: var(--blue-light);
+  border: 2px solid var(--blue-light);
+}
+.dropbtn-blue:hover,
+.btn-blue:hover {
+  background: var(--blue-hard);
+  border: 2px solid var(--blue-medium);
+  color: var(--blue-light);
+}
+.dropbtn-red,
+.btn-red {
+  background: var(--red-medium);
+  border: 2px solid var(--red-light);
+}
+.dropbtn-red:hover,
+.btn-red:hover {
+  background: var(--red-hard);
+  border: 2px solid var(--red-medium);
+  color: var(--red-light);
+}
+.dropbtn-green,
+.btn-green {
+  background: var(--green-medium);
+  border: 2px solid var(--green-light);
+}
+.dropbtn-green:hover,
+.btn-green:hover {
+  background: var(--green-hard);
+  border: 2px solid var(--green-medium);
+  color: var(--green-light);
+}
+.dropbtn-orange,
+.btn-orange {
+  background: var(--orange-medium);
+  border: 2px solid var(--orange-light);
+}
+.dropbtn-orange:hover,
+.btn-orange:hover {
+  background: var(--orange-hard);
+  border: 2px solid var(--orange-medium);
+  color: var(--orange-light);
+}
+.dropbtn-purple,
+.btn-purple {
+  background: var(--purple-medium);
+  border: 2px solid var(--purple-light);
+}
+.dropbtn-purple:hover,
+.btn-purple:hover {
+  background: var(--purple-hard);
+  border: 2px solid var(--purple-medium);
+  color: var(--purple-light);
+}
+.dropbtn-aqua,
+.btn-aqua {
+  background: var(--aqua-medium);
+  border: 2px solid var(--aqua-light);
+}
+.dropbtn-aqua:hover,
+.btn-aqua:hover {
+  background: var(--aqua-hard);
+  border: 2px solid var(--aqua-medium);
+  color: var(--aqua-light);
+}
+.dropbtn-dark,
+.btn-dark {
+  background: var(--dark-medium);
+  border: 2px solid var(--dark-light);
+}
+.dropbtn-dark:hover,
+.btn-dark:hover {
+  background: var(--dark-hard);
+  border: 2px solid var(--gray-medium);
+  color: var(--gray-light);
+}
+.dropbtn-light,
+.btn-light {
+  background: var(--light-medium);
+  border: 2px solid var(--light-light);
+}
+.dropbtn-light:hover,
+.btn-light:hover {
+  background: var(--light-hard);
+  border: 2px solid var(--gray-medium);
+  color: var(--gray-medium);
+}
+.dropbtn-gray,
+.btn-gray {
+  background: var(--gray-medium);
+  border: 2px solid var(--gray-light);
+}
+.dropbtn-gray:hover,
+.btn-gray:hover {
+  background: var(--gray-hard);
+  border: 2px solid var(--dark-medium);
+  color: var(--gray-light);
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown-content {
+  background: var(--light-light);
+  display: none;
+  position: absolute;
+  z-index: 1;
+  margin-top: 40px;
+  width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content > * {
+  float: none;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  color: var(--dark);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.drop-blue a:hover {
+  background: var(--blue-hard);
+  border: 2px solid var(--blue-medium);
+  color: var(--blue-light);
+}
+.drop-red a:hover {
+  background: var(--red-hard);
+  border: 2px solid var(--red-medium);
+  color: var(--red-light);
+}
+.drop-green a:hover {
+  background: var(--green-hard);
+  border: 2px solid var(--green-medium);
+  color: var(--green-light);
+}
+.drop-orange a:hover {
+  background: var(--orange-hard);
+  border: 2px solid var(--orange-medium);
+  color: var(--orange-light);
+}
+.drop-purple a:hover {
+  background: var(--purple-hard);
+  border: 2px solid var(--purple-medium);
+  color: var(--purple-light);
+}
+.drop-aqua a:hover {
+  background: var(--aqua-hard);
+  border: 2px solid var(--aqua-medium);
+  color: var(--aqua-light);
+}
+.drop-dark a:hover {
+  background: var(--dark-hard);
+  border: 2px solid var(--gray-medium);
+  color: var(--gray-light);
+}
+.drop-light a:hover {
+  background: var(--light-hard);
+  border: 2px solid var(--gray-medium);
+  color: var(--gray-medium);
+}
+.drop-gray a:hover {
+  background: var(--gray-hard);
+  border: 2px solid var(--dark-medium);
+  color: var(--gray-light);
 }
 /*****************************************************************************************
                                         Helpers
@@ -512,7 +743,7 @@ body {
 .bg-dark-hard {
   background: var(--dark-hard);
 }
-.bg-light-light {
+.bg-light {
   background: var(--light-light);
 }
 .bg-light-medium {
@@ -596,7 +827,7 @@ body {
 .text-dark-hard {
   color: var(--dark-hard);
 }
-.text-light-light {
+.text-light {
   color: var(--light-light) !important;
 }
 .text-light-medium {
@@ -616,4 +847,50 @@ body {
 }
 .text-bold {
   font-weight: bold;
+}
+/***************************
+            Margins
+***************************/
+.margin-left {
+  margin-left: 15px;
+}
+.margin-right {
+  margin-right: 15px;
+}
+.margin-bottom {
+  margin-bottom: 15px;
+}
+.margin-top {
+  margin-top: 15px;
+}
+.margin-top-lg {
+  margin-top: 95px;
+}
+/***************************
+            Interlineado
+***************************/
+.inter-3 {
+  line-height: 3px !important;
+}
+.inter-4 {
+  line-height: 4px !important;
+}
+.inter-5 {
+  line-height: 4px !important;
+}
+.inter-lg {
+  line-height: 20px !important;
+}
+/***************************
+            HR
+***************************/
+hr {
+  border: none;
+  height: 20px;
+  width: 98%;
+  height: 50px;
+  margin-top: 0;
+  border-bottom: 1px solid var(--gray-light);
+  box-shadow: 0 10px 10px -15px #333;
+  margin: -50px auto 10px;
 }

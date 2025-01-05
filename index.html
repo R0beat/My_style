@@ -209,7 +209,7 @@
               <span><</span>div
               <i class="text-orange-hard"
                 >class="<span class="text-green-hard"
-                  >grid span-lg-6 span-md-6 span-sm-1</span
+                  >card span-lg-6 span-md-6 span-sm-1</span
                 >"</i
               >>
             </p>
@@ -220,7 +220,7 @@
               <span><</span>div
               <i class="text-orange-hard"
                 >class="<span class="text-green-hard"
-                  >grid span-lg-6 span-md-6 span-sm-1</span
+                  >card span-lg-6 span-md-6 span-sm-1</span
                 >"</i
               >>
             </p>
@@ -611,9 +611,88 @@
         </div>
       </div>
     </div>
+    <!--Modal-->
     <div class="contenedor">
-      <div class="grid col-12 col-sm-1">
-        <div class="span-md-3 span-sm-1">
+      <div class="grid col-lg-12 col-md-12 col-sm-1">
+        <div class="card span-lg-8 span-md-8 span-sm-1">
+          <h2>Modal</h2>
+          <hr />
+          <code class="text-bold">
+            <p class="text-blue-hard">
+              <span><</span>button
+              <i class="text-orange-hard"
+                >class="<span class="text-green-hard">btn btn-blue</span>"</i
+              >
+              <i class="text-orange-hard"
+                >id="<span class="text-green-hard">myBtn</span>"</i
+              >
+              ><span class="text-dark-hard">Modal</span
+              ><span><</span>/button<span>></span>
+            </p>
+            <p class="text-blue-hard">
+              <span><</span>div
+              <i class="text-orange-hard"
+                >id="<span class="text-green-hard">myModal</span>"</i
+              >
+              <i class="text-orange-hard"
+                >class="<span class="text-green-hard">modal</span>"</i
+              >>
+            </p>
+            <div class="margin-left inter-lg">
+              <p class="text-blue-hard">
+                <span><</span>div
+                <i class="text-orange-hard"
+                  >class="<span class="text-green-hard">modal-content</span>"</i
+                >>
+              </p>
+              <p class="margin-left text-blue-hard">
+                <span><</span>div
+                <i class="text-orange-hard"
+                  >class="<span class="text-green-hard">modal-title</span>"</i
+                >>
+              </p>
+              <div class="margin-left">
+                <p class="margin-left text-blue-hard">
+                  <span><</span>button
+                  <i class="text-orange-hard"
+                    >id="<span class="text-green-hard">close</span>"</i
+                  >
+                  <i class="text-orange-hard"
+                    >onclick="<span class="text-green-hard">cerrar()</span>"</i
+                  >
+                  <i class="text-orange-hard"
+                    >class="<span class="text-green-hard">close</span>"</i
+                  >><span class="text-dark-hard">X</span
+                  ><span><</span>/button<span>></span>
+                </p>
+              </div>
+              <div class="margin-left">
+                <p class="margin-left text-blue-hard">
+                  <span><</span>h1
+                  <i class="text-orange-hard"
+                    >class="<span class="text-green-hard">text-light</span>"</i
+                  >><span class="text-dark-hard">Modal</span
+                  ><span><</span>/h1<span>></span>
+                </p>
+                <p class="margin-left text-blue-hard">
+                  <span><</span>hr/<span>></span>
+                </p>
+              </div>
+              <p class="margin-left text-blue-hard">
+                <span><</span>/div<span>></span>
+              </p>
+
+              <p class="margin-left text-blue-hard"><span><</span>p></p>
+              <p class="margin-left text-blue-hard">
+                <span><</span>/p<span>></span>
+              </p>
+              <p class="text-blue-hard"><span><</span>/div<span>></span></p>
+            </div>
+            <p class="text-blue-hard"><span><</span>/div<span>></span></p>
+          </code>
+        </div>
+
+        <div class="card span-lg-4 span-md-4 span-sm-1">
           <h1 class="">Modal</h1>
           <button class="btn btn-blue" id="myBtn">Modal</button>
         </div>
@@ -626,7 +705,7 @@
       <div class="modal-content">
         <div class="modal-title">
           <button id="close" class="close" onclick="cerrar()">&times;</button>
-          <h1>Modal</h1>
+          <h1 class="text-light">Modal</h1>
           <hr />
         </div>
         <p>

@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Style</title>
-    <link rel="stylesheet" href="my_style.css" />
+    <title>Peliculas</title>
+    <link rel="stylesheet" href="./css/style.css" />
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -16,227 +16,185 @@
   </head>
   <body>
     <header class="bg-primary">
-      <nav class="nav-primary">
-        <div class="menu-responsive" id="menu-responsive">
-          <span class="text-white"
-            ><ion-icon name="menu-outline"></ion-icon
-          ></span>
-        </div>
+      <nav class="">
+        <input type="checkbox" name="" id="check" />
+        <label for="check" class="check-menu">
+          <ion-icon name="menu-outline"></ion-icon>
+        </label>
+        <a href="" class="inicio">
+          <img src="img/logo2.svg" class="logo" alt="Logo" />
+        </a>
         <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Acerca de</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a class="active-dark" href="">Inicio</a></li>
+          <li><a href="">Peliculas</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Conatcto</a></li>
         </ul>
       </nav>
     </header>
     <div class="contenedor margin-top-lg">
-      <h1>Encabezado 1</h1>
-      <h2>Encabezado 2</h2>
-      <h3>Encabezado 3</h3>
-      <h4>Encabezado 4</h4>
-      <h5>Encabezado 5</h5>
-      <h6>Encabezado 6</h6>
-      <h1 class="display-1">Display 1</h1>
-      <h2 class="display-2">Display 2</h2>
-      <h3 class="display-3">Display 3</h3>
-    </div>
-    <div class="contenedor">
-      <main class="grid col-md-10 col-sm-1">
-        <div class="linea">Span 1</div>
-        <div class="linea">Span 1</div>
-        <div class="linea">Span 1</div>
-        <div class="linea">Span 1</div>
-        <div class="linea">Span 1</div>
-        <div class="linea">Span 1</div>
-        <div class="linea">Span 1</div>
-        <div class="linea">Span 1</div>
-        <div class="linea">Span 1</div>
-        <div class="linea">Span 1</div>
-        <div class="linea span-md-2">Span 2</div>
-        <div class="linea span-md-8">Span 8</div>
-        <div class="linea span-md-7">Span 7</div>
-        <div class="linea span-md-3">Span 3</div>
-        <div class="linea span-md-4">Span 4</div>
-        <div class="linea span-md-6">Span 6</div>
-        <div class="linea span-md-5">Span 5</div>
-        <div class="linea span-md-5">Span 5</div>
-        <div class="linea span-md-1">Span 1</div>
-        <div class="linea span-md-9">Span 9</div>
-        <div class="linea span-md-10">Span 10</div>
-      </main>
-    </div>
-    <div class="contenedor">
-      <div class="grid col-md-10 col-sm-1">
-        <div class="card span-md-10 span-sm-1">
-          <h2>Botones</h2>
-          <hr />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut atque
-            optio obcaecati quaerat corporis eos iure dolor libero ratione eius
-            deleniti rerum quae vitae, blanditiis voluptas doloribus quisquam,
-            nam ex!
+      <div class="grid col-lg-12 col-md-12 col-sm-1">
+        <div class="card span-lg-3 span-md-3 span-sm-1">
+          <img src="img/pelicula.svg" class="img-fluid" alt="" />
+          <h2>Titulo 1</h2>
+          <p class="margin-top">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+            officiis!
           </p>
-          <div class="grid col-lg-8 col-md-4 col-sm-2">
+          <div class="margin-top grid col-lg-2 col-md-2 col-sm-1">
             <div>
-              <button class="btn btn-primary">Primary</button>
-            </div>
-            <div>
-              <button class="btn btn-secondary">Secondary</button>
-            </div>
-            <div>
-              <button class="btn btn-success">Success</button>
-            </div>
-            <div>
-              <button class="btn btn-danger">Danger</button>
-            </div>
-            <div>
-              <button class="btn btn-warning">Warning</button>
-            </div>
-            <div>
-              <button class="btn btn-info">Info</button>
-            </div>
-            <div>
-              <button class="btn btn-dark">Dark</button>
-            </div>
-            <div>
-              <button class="btn btn-ligth">Light</button>
-            </div>
-          </div>
-          <h2 class="margin-top">Dropdown</h2>
-          <hr />
-          <div class="grid col-lg-8 col-md-4 col-sm-2 margin-top">
-            <div class="dropdown">
-              <div class="dropdown-content drop-primary">
-                <a href="">Link 1</a>
-                <a href="">Link 2</a>
-                <a href="">Link 3</a>
-              </div>
-              <button class="btn dropbtn-primary">
-                Primary
-                <ion-icon name="chevron-down-outline"></ion-icon>
+              <button class="btn btn-dark">
+                <ion-icon name="create-outline"></ion-icon>
               </button>
             </div>
-            <div class="dropdown">
-              <div class="dropdown-content drop-secondary">
-                <a href="">Link 1</a>
-                <a href="">Link 2</a>
-                <a href="">Link 3</a>
-              </div>
-              <button class="btn dropbtn-secondary">
-                Secondary
-                <ion-icon name="chevron-down-outline"></ion-icon>
-              </button>
-            </div>
-            <div class="dropdown">
-              <div class="dropdown-content drop-success">
-                <a href="">Link 1</a>
-                <a href="">Link 2</a>
-                <a href="">Link 3</a>
-              </div>
-              <button class="btn dropbtn-success drop-succes">
-                Success
-                <ion-icon name="chevron-down-outline"></ion-icon>
-              </button>
-            </div>
-            <div class="dropdown">
-              <div class="dropdown-content drop-danger">
-                <a href="">Link 1</a>
-                <a href="">Link 2</a>
-                <a href="">Link 3</a>
-              </div>
-              <button class="btn dropbtn-danger">
-                Danger
-                <ion-icon name="chevron-down-outline"></ion-icon>
-              </button>
-            </div>
-            <div class="dropdown">
-              <div class="dropdown-content drop-warning">
-                <a href="">Link 1</a>
-                <a href="">Link 2</a>
-                <a href="">Link 3</a>
-              </div>
-              <button class="btn dropbtn-warning">
-                Warning
-                <ion-icon name="chevron-down-outline"></ion-icon>
-              </button>
-            </div>
-            <div class="dropdown">
-              <div class="dropdown-content drop-info">
-                <a href="">Link 1</a>
-                <a href="">Link 2</a>
-                <a href="">Link 3</a>
-              </div>
-              <button class="btn dropbtn-info">
-                Info
-                <ion-icon name="chevron-down-outline"></ion-icon>
-              </button>
-            </div>
-            <div class="dropdown">
-              <div class="dropdown-content drop-dark">
-                <a href="">Link 1</a>
-                <a href="">Link 2</a>
-                <a href="">Link 3</a>
-              </div>
-              <button class="btn dropbtn-dark">
-                Dark
-                <ion-icon name="chevron-down-outline"></ion-icon>
-              </button>
-            </div>
-            <div class="dropdown">
-              <div class="dropdown-content drop-ligth">
-                <a href="">Link 1</a>
-                <a href="">Link 2</a>
-                <a href="">Link 3</a>
-              </div>
-              <button class="btn dropbtn-ligth">
-                Ligth
-                <ion-icon name="chevron-down-outline"></ion-icon>
+            <div>
+              <button class="btn btn-red">
+                <ion-icon name="trash-outline"></ion-icon>
               </button>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="contenedor">
-      <div class="grid col-10 col-sm-1">
-        <div class="card span-md-6 span-sm-1">
-          <div class="">
-            <h1 class="">Lorem ipsum dolor</h1>
-            <hr />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-              voluptates reprehenderit nesciunt officia nostrum commodi ea
-              voluptatum aut sint, delectus nulla cupiditate nihil quae dolores
-              eveniet. Culpa atque reiciendis repudiandae!
-            </p>
-          </div>
-          <div class="">
-            <h1 class="">Lorem ipsum dolor</h1>
-            <hr />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-              voluptates reprehenderit nesciunt officia nostrum commodi ea
-              voluptatum aut sint, delectus nulla cupiditate nihil quae dolores
-              eveniet. Culpa atque reiciendis repudiandae!
-            </p>
+        <div class="card span-lg-3 span-md-3 span-sm-1">
+          <img src="img/pelicula.svg" class="img-fluid" alt="" />
+          <h2>Titulo 2</h2>
+          <p class="margin-top">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
+            magni.
+          </p>
+          <div class="margin-top grid col-lg-2 col-md-2 col-sm-1">
+            <div>
+              <button class="btn btn-dark">
+                <ion-icon name="create-outline"></ion-icon>
+              </button>
+            </div>
+            <div>
+              <button class="btn btn-red">
+                <ion-icon name="trash-outline"></ion-icon>
+              </button>
+            </div>
           </div>
         </div>
-        <div class="card span-md-4 span-sm-1">
-          <h1 class="">Registrate</h1>
+        <div class="card span-lg-3 span-md-3 span-sm-1">
+          <img src="img/pelicula.svg" class="img-fluid" alt="" />
+          <h2>Titulo 3</h2>
+          <p class="margin-top">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores,
+            ea.
+          </p>
+          <div class="margin-top grid col-lg-2 col-md-2 col-sm-1">
+            <div>
+              <button class="btn btn-dark">
+                <ion-icon name="create-outline"></ion-icon>
+              </button>
+            </div>
+            <div>
+              <button class="btn btn-red">
+                <ion-icon name="trash-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card span-lg-3 span-md-3 span-sm-1">
+          <h2>Buscar</h2>
           <form action="">
-            <div class="grid">
-              <input class="form-input col-md-4" type="text" />
-              <input class="form-input col-md-4" type="text" />
+            <div class="grid col-12 col-sm-1">
+              <input
+                class="margin-top form-input span-md-12 span-sm-1"
+                type="text"
+              />
             </div>
-            <div class="grid col-lg-2 col-md-2 col-sm-2">
-              <button class="btn btn-primary">Suscribete</button>
-              <button class="btn btn-danger">Registrate</button>
-            </div>
+            <button class="btn btn-blue">
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
           </form>
         </div>
       </div>
     </div>
-    <script src="main.js"></script>
+    <div class="contenedor margin-top">
+      <div class="grid col-lg-12 col-md-12 col-sm-1">
+        <div class="card span-lg-3 span-md-3 span-sm-1">
+          <img src="img/pelicula.svg" class="img-fluid" alt="" />
+          <h2>Titulo 4</h2>
+          <p class="margin-top">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
+            sapiente!
+          </p>
+          <div class="margin-top grid col-lg-2 col-md-2 col-sm-1">
+            <div>
+              <button class="btn btn-dark">
+                <ion-icon name="create-outline"></ion-icon>
+              </button>
+            </div>
+            <div>
+              <button class="btn btn-red">
+                <ion-icon name="trash-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card span-lg-3 span-md-3 span-sm-1">
+          <img src="img/pelicula.svg" class="img-fluid" alt="" />
+          <h2>Titulo 5</h2>
+          <p class="margin-top">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima,
+            dolores!
+          </p>
+          <div class="margin-top grid col-lg-2 col-md-2 col-sm-1">
+            <div>
+              <button class="btn btn-dark">
+                <ion-icon name="create-outline"></ion-icon>
+              </button>
+            </div>
+            <div>
+              <button class="btn btn-red">
+                <ion-icon name="trash-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card span-lg-3 span-md-3 span-sm-1">
+          <img src="img/pelicula.svg" class="img-fluid" alt="" />
+          <h2>Titulo 6</h2>
+          <p class="margin-top">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+            ratione.
+          </p>
+          <div class="margin-top grid col-lg-2 col-md-2 col-sm-1">
+            <div>
+              <button class="btn btn-dark">
+                <ion-icon name="create-outline"></ion-icon>
+              </button>
+            </div>
+            <div>
+              <button class="btn btn-red">
+                <ion-icon name="trash-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card span-lg-3 span-md-3 span-sm-1">
+          <h2>Buscar</h2>
+          <form action="">
+            <div class="grid col-12 col-sm-1">
+              <input
+                class="form-input span-md-12 span-sm-1"
+                type="text"
+                placeholder="Titulo"
+              />
+              <input
+                class="form-input span-md-12 span-sm-1"
+                type="text"
+                placeholder="Descripcion"
+              />
+            </div>
+            <button class="btn btn-dark">
+              <ion-icon name="save-outline"></ion-icon>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

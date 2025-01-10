@@ -25,6 +25,7 @@
   --gray-light: #7c6f6a;
   --gray-medium: #665c54;
   --gray-hard: #504945;
+  --bg0: #f9f5d7;
   --light-light: #fbf1c7;
   --light-medium: #ebdbb2;
   --light-hard: #d5c4a1;
@@ -35,7 +36,7 @@
   box-sizing: border-box;
 }
 body {
-  background: var(--light-medium);
+  background: var(--bg0);
   color: var(--dark-light);
   font-family: "Work Sans", sans-serif;
   font-size: 14px;
@@ -386,7 +387,7 @@ body {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: rgba(60,56,54,0.95);
+    background: rgba(124,111,106,0.95);
     top: 80px;
     left: 100%;
     text-align: center;
@@ -406,6 +407,10 @@ body {
   #check:checked ~ ul {
     left: 0;
   }
+  .img-peli {
+    width: 10% !important;
+    margin: 0 auto;
+  }
 }
 /*****************************************************************************************
                                         Componentes
@@ -418,7 +423,7 @@ nav {
   position: fixed;
   height: 80px;
   width: 100%;
-  background: var(--aqua-hard);
+  background: var(--dark-medium);
 }
 nav ul {
   float: right;
@@ -436,9 +441,12 @@ nav ul li a {
   border-radius: 1.5px;
   text-transform: uppercase;
 }
+li a {
+  text-decoration: none;
+}
 li a:hover,
 li a.active-aqua {
-  background: var(--aqua-medium);
+  background: var(--gray-hard);
 }
 #check {
   display: none;
@@ -518,6 +526,28 @@ li a.active-aqua {
   border: 2px solid var(--blue-medium);
   color: var(--blue-light);
 }
+.dropbtn-blue-medium,
+.btn-blue-medium {
+  background: var(--blue-medium);
+  border: 2px solid var(--blue-medium);
+}
+.dropbtn-blue-medium:hover,
+.btn-blue-medium:hover {
+  background: var(--blue-hard);
+  border: 2px solid var(--blue-light);
+  color: var(--blue-light);
+}
+.dropbtn-blue-hard,
+.btn-blue-hard {
+  background: var(--blue-hard);
+  border: 2px solid var(--blue-hard);
+}
+.dropbtn-blue-hard:hover,
+.btn-blue-hard:hover {
+  background: var(--blue-medium);
+  border: 2px solid var(--blue-light);
+  color: var(--blue-hard);
+}
 .dropbtn-red,
 .btn-red {
   background: var(--red-medium);
@@ -527,6 +557,28 @@ li a.active-aqua {
 .btn-red:hover {
   background: var(--red-hard);
   border: 2px solid var(--red-medium);
+  color: var(--red-light);
+}
+.dropbtn-red-medium,
+.btn-red-medium {
+  background: var(--red-medium);
+  border: 2px solid var(--red-medium);
+}
+.dropbtn-red-medium:hover,
+.btn-red-medium:hover {
+  background: var(--red-hard);
+  border: 2px solid var(--red-medium);
+  color: var(--red-light);
+}
+.dropbtn-red-hard,
+.btn-red-hard {
+  background: var(--red-hard);
+  border: 2px solid var(--red-hard);
+}
+.dropbtn-red-hard:hover,
+.btn-red-hard:hover {
+  background: var(--red-medium);
+  border: 2px solid var(--red-light);
   color: var(--red-light);
 }
 .dropbtn-green,
@@ -540,6 +592,28 @@ li a.active-aqua {
   border: 2px solid var(--green-medium);
   color: var(--green-light);
 }
+.dropbtn-green-medium,
+.btn-green-medium {
+  background: var(--green-medium);
+  border: 2px solid var(--green-medium);
+}
+.dropbtn-green-medium:hover,
+.btn-green-medium:hover {
+  background: var(--green-hard);
+  border: 2px solid var(--green-medium);
+  color: var(--green-light);
+}
+.dropbtn-green-hard,
+.btn-green-hard {
+  background: var(--green-hard);
+  border: 2px solid var(--green-hard);
+}
+.dropbtn-green-hard:hover,
+.btn-green-hard:hover {
+  background: var(--green-medium);
+  border: 2px solid var(--green-light);
+  color: var(--green-hard);
+}
 .dropbtn-orange,
 .btn-orange {
   background: var(--orange-medium);
@@ -550,6 +624,28 @@ li a.active-aqua {
   background: var(--orange-hard);
   border: 2px solid var(--orange-medium);
   color: var(--orange-light);
+}
+.dropbtn-orange-medium,
+.btn-orange-medium {
+  background: var(--orange-medium);
+  border: 2px solid var(--orange-medium);
+}
+.dropbtn-orange-medium:hover,
+.btn-orange-medium:hover {
+  background: var(--orange-hard);
+  border: 2px solid var(--orange-medium);
+  color: var(--orange-light);
+}
+.dropbtn-orange-hard,
+.btn-orange-hard {
+  background: var(--orange-hard);
+  border: 2px solid var(--orange-hard);
+}
+.dropbtn-orange-hard:hover,
+.btn-orange-hard:hover {
+  background: var(--orange-medium);
+  border: 2px solid var(--orange-light);
+  color: var(--orange-hard);
 }
 .dropbtn-purple,
 .btn-purple {
@@ -562,6 +658,28 @@ li a.active-aqua {
   border: 2px solid var(--purple-medium);
   color: var(--purple-light);
 }
+.dropbtn-purple-medium,
+.btn-purple-medium {
+  background: var(--purple-medium);
+  border: 2px solid var(--purple-medium);
+}
+.dropbtn-purple-medium:hover,
+.btn-purple-medium:hover {
+  background: var(--purple-hard);
+  border: 2px solid var(--purple-light);
+  color: var(--purple-light);
+}
+.dropbtn-purple-hard,
+.btn-purple-hard {
+  background: var(--purple-hard);
+  border: 2px solid var(--purple-hard);
+}
+.dropbtn-purple-hard:hover,
+.btn-purple-hard:hover {
+  background: var(--purple-medium);
+  border: 2px solid var(--purple-light);
+  color: var(--purple-hard);
+}
 .dropbtn-aqua,
 .btn-aqua {
   background: var(--aqua-medium);
@@ -572,6 +690,28 @@ li a.active-aqua {
   background: var(--aqua-hard);
   border: 2px solid var(--aqua-medium);
   color: var(--aqua-light);
+}
+.dropbtn-aqua-medium,
+.btn-aqua-medium {
+  background: var(--aqua-medium);
+  border: 2px solid var(--aqua-medium);
+}
+.dropbtn-aqua-medium:hover,
+.btn-aqua-medium:hover {
+  background: var(--aqua-hard);
+  border: 2px solid var(--aqua-light);
+  color: var(--aqua-light);
+}
+.dropbtn-aqua-hard,
+.btn-aqua-hard {
+  background: var(--aqua-hard);
+  border: 2px solid var(--aqua-hard);
+}
+.dropbtn-aqua-hard:hover,
+.btn-aqua-hard:hover {
+  background: var(--aqua-medium);
+  border: 2px solid var(--aqua-light);
+  color: var(--aqua-hard);
 }
 .dropbtn-dark,
 .btn-dark {
@@ -584,6 +724,28 @@ li a.active-aqua {
   border: 2px solid var(--gray-medium);
   color: var(--gray-light);
 }
+.dropbtn-dark-medium,
+.btn-dark-medium {
+  background: var(--dark-medium);
+  border: 2px solid var(--dark-medium);
+}
+.dropbtn-dark-medium:hover,
+.btn-dark-medium:hover {
+  background: var(--dark-hard);
+  border: 2px solid var(--dark-light);
+  color: var(--dark-light);
+}
+.dropbtn-dark-hard,
+.btn-dark-hard {
+  background: var(--dark-hard);
+  border: 2px solid var(--dark-hard);
+}
+.dropbtn-dark-hard:hover,
+.btn-dark-hard:hover {
+  background: var(--dark-medium);
+  border: 2px solid var(--dark-light);
+  color: var(--dark-hard);
+}
 .dropbtn-light,
 .btn-light {
   background: var(--light-medium);
@@ -595,6 +757,28 @@ li a.active-aqua {
   border: 2px solid var(--gray-medium);
   color: var(--gray-medium);
 }
+.dropbtn-light-medium,
+.btn-light-medium {
+  background: var(--light-medium);
+  border: 2px solid var(--light-medium);
+}
+.dropbtn-light-medium:hover,
+.btn-light-medium:hover {
+  background: var(--light-hard);
+  border: 2px solid var(--light-light);
+  color: var(--light-light);
+}
+.dropbtn-light-hard,
+.btn-light-hard {
+  background: var(--light-hard);
+  border: 2px solid var(--light-hard);
+}
+.dropbtn-light-hard:hover,
+.btn-light-hard:hover {
+  background: var(--light-medium);
+  border: 2px solid var(--light-light);
+  color: var(--light-hard);
+}
 .dropbtn-gray,
 .btn-gray {
   background: var(--gray-medium);
@@ -605,6 +789,28 @@ li a.active-aqua {
   background: var(--gray-hard);
   border: 2px solid var(--dark-medium);
   color: var(--gray-light);
+}
+.dropbtn-gray-medium,
+.btn-gray-medium {
+  background: var(--gray-medium);
+  border: 2px solid var(--gray-medium);
+}
+.dropbtn-gray-medium:hover,
+.btn-gray-medium:hover {
+  background: var(--gray-hard);
+  border: 2px solid var(--gray-light);
+  color: var(--gray-light);
+}
+.dropbtn-gray-hard,
+.btn-gray-hard {
+  background: var(--gray-hard);
+  border: 2px solid var(--gray-hard);
+}
+.dropbtn-gray-hard:hover,
+.btn-gray-hard:hover {
+  background: var(--gray-medium);
+  border: 2px solid var(--gray-light);
+  color: var(--gray-hard);
 }
 .dropdown {
   float: left;
@@ -707,8 +913,6 @@ li a.active-aqua {
   width: 100% !important;
 }
 .close {
-  background: none;
-  border: none;
   margin-top: -15px;
   color: #aaa;
   float: right;
@@ -811,6 +1015,10 @@ li a.active-aqua {
 .bg-gray-hard {
   background: var(--gray-hard);
 }
+.bg-none {
+  background: none !important;
+  box-shadow: none !important;
+}
 /***************************
             Text color
 ***************************/
@@ -904,9 +1112,6 @@ li a.active-aqua {
 .margin-left {
   margin-left: 15px;
 }
-.marginleft-lg {
-  margin-left: 30px !important;
-}
 .margin-right {
   margin-right: 15px;
 }
@@ -947,12 +1152,6 @@ hr {
   box-shadow: 0 10px 10px -15px #333;
   margin: -50px auto 10px;
 }
-/***************************
-            Formulario
-***************************/
-label {
-  width: 100%;
-}
 .form-input {
   width: 100%;
   height: 40px;
@@ -972,4 +1171,34 @@ label {
 .img-fluid {
   max-width: 100%;
   height: auto;
+}
+.img-peli {
+  width: 50% !important;
+  margin: 0 auto;
+}
+/*****************************************************************************************
+                                        Tipografías
+*****************************************************************************************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+.display-1 {
+  font-weight: 700 !important;
+  font-size: 64px !important;
+}
+.display-2 {
+  font-weight: 700 !important;
+  font-size: 54px !important;
+}
+.display-3 {
+  font-weight: 700 !important;
+  font-size: 44px !important;
+}
+.upper-case {
+  text-transform: uppercase;
 }

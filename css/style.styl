@@ -25,6 +25,7 @@
     --gray-light: #7c6f6a //rgb(124, 111, 106)
     --gray-medium: #665c54 //rgb(102, 92, 84)
     --gray-hard: #504945 //rgb(80, 73, 69)
+    --bg0:#f9f5d7 // rgb(249, 245, 215)
     --light-light: #fbf1c7 //rgb(251, 241, 199)
     --light-medium: #ebdbb2 //rgb(235, 219, 178)
     --light-hard: #d5c4a1 //rgb(213, 196, 161)
@@ -33,7 +34,7 @@
     padding: 0
     box-sizing: border-box
 body
-    background: var(--light-medium)
+    background: var(--bg0)
     color: var( --dark-light)
     font-family: "Work Sans", sans-serif
     font-size: 14px
@@ -283,7 +284,7 @@ body
         position: fixed
         width 100%
         height 100vh
-        background: rgba(60, 56, 54,0.95)
+        background: rgba(124, 111, 106,0.95)
         top 80px
         left: 100%
         text-align: center
@@ -300,6 +301,10 @@ body
                         background:var(--dark-medium)  
     #check:checked ~ ul
         left: 0     
+    .img
+        &-peli 
+            width 10% !important
+            margin: 0 auto 
 /*****************************************************************************************
                                         Componentes
 *****************************************************************************************/
@@ -311,7 +316,7 @@ nav
     position: fixed
     height: 80px
     width 100%
-    background: var(--aqua-hard)
+    background: var(--dark-medium)
     & ul
         float: right 
         margin-right: 20px
@@ -327,9 +332,10 @@ nav
                 text-transform: uppercase
 li
     & a
+        text-decoration: none
         &:hover
         &.active-aqua
-            background:var(--aqua-medium)          
+            background:var(--gray-hard)          
 
 #check
     display: none
@@ -396,6 +402,20 @@ li
             background: var(--blue-hard)
             border: 2px solid var(--blue-medium)
             color: var(--blue-light)
+        &-medium
+            background: var(--blue-medium)
+            border: 2px solid var(--blue-medium)
+            &:hover
+                background: var(--blue-hard)
+                border: 2px solid var(--blue-light)
+                color: var(--blue-light)
+        &-hard
+            background: var(--blue-hard)
+            border: 2px solid var(--blue-hard)
+            &:hover
+                background: var(--blue-medium)
+                border: 2px solid var(--blue-light)
+                color: var(--blue-hard)
     &-red
         background: var(--red-medium)
         border: 2px solid var(--red-light)
@@ -403,6 +423,20 @@ li
             background: var(--red-hard)
             border: 2px solid var(--red-medium)
             color: var(--red-light)
+        &-medium
+            background: var(--red-medium)
+            border: 2px solid var(--red-medium)
+            &:hover
+                background: var(--red-hard)
+                border: 2px solid var(--red-medium)
+                color: var(--red-light)
+        &-hard
+            background: var(--red-hard)
+            border: 2px solid var(--red-hard)
+            &:hover
+                background: var(--red-medium)
+                border: 2px solid var(--red-light)
+                color: var(--red-light)
     &-green
         background: var(--green-medium)
         border: 2px solid var(--green-light)
@@ -410,6 +444,20 @@ li
             background: var(--green-hard)
             border: 2px solid var(--green-medium)
             color: var(--green-light)
+        &-medium
+            background: var(--green-medium)
+            border: 2px solid var(--green-medium)
+            &:hover
+                background: var(--green-hard)
+                border: 2px solid var(--green-medium)
+                color: var(--green-light)
+        &-hard
+            background: var(--green-hard)
+            border: 2px solid var(--green-hard)
+            &:hover
+                background: var(--green-medium)
+                border: 2px solid var(--green-light)
+                color: var(--green-hard)
     &-orange
         background: var(--orange-medium)
         border: 2px solid var(--orange-light)
@@ -417,6 +465,20 @@ li
             background: var(--orange-hard)
             border: 2px solid var(--orange-medium)
             color: var(--orange-light)
+        &-medium
+            background: var(--orange-medium)
+            border: 2px solid var(--orange-medium)
+            &:hover
+                background: var(--orange-hard)
+                border: 2px solid var(--orange-medium)
+                color: var(--orange-light)
+        &-hard
+            background: var(--orange-hard)
+            border: 2px solid var(--orange-hard)
+            &:hover
+                background: var(--orange-medium)
+                border: 2px solid var(--orange-light)
+                color: var(--orange-hard)    
     &-purple
         background: var(--purple-medium)
         border: 2px solid var(--purple-light)
@@ -424,6 +486,20 @@ li
             background: var(--purple-hard)
             border: 2px solid var(--purple-medium)
             color: var(--purple-light)
+        &-medium
+            background: var(--purple-medium)
+            border: 2px solid var(--purple-medium)
+            &:hover
+                background: var(--purple-hard)
+                border: 2px solid var(--purple-light)
+                color: var(--purple-light)
+        &-hard
+            background: var(--purple-hard)
+            border: 2px solid var(--purple-hard)
+            &:hover
+                background: var(--purple-medium)
+                border: 2px solid var(--purple-light)
+                color: var(--purple-hard)
     &-aqua
         background: var(--aqua-medium)
         border: 2px solid var(--aqua-light)
@@ -431,6 +507,20 @@ li
             background: var(--aqua-hard)
             border: 2px solid var(--aqua-medium)
             color: var(--aqua-light)
+        &-medium
+            background: var(--aqua-medium)
+            border: 2px solid var(--aqua-medium)
+            &:hover
+                background: var(--aqua-hard)
+                border: 2px solid var(--aqua-light)
+                color: var(--aqua-light)
+        &-hard
+            background: var(--aqua-hard)
+            border: 2px solid var(--aqua-hard)
+            &:hover
+                background: var(--aqua-medium)
+                border: 2px solid var(--aqua-light)
+                color: var(--aqua-hard)
     &-dark
         background: var(--dark-medium)
         border: 2px solid var(--dark-light)
@@ -438,6 +528,20 @@ li
             background: var(--dark-hard)
             border: 2px solid var(--gray-medium)
             color: var(--gray-light)
+        &-medium
+            background: var(--dark-medium)
+            border: 2px solid var(--dark-medium)
+            &:hover
+                background: var(--dark-hard)
+                border: 2px solid var(--dark-light)
+                color: var(--dark-light)
+        &-hard
+            background: var(--dark-hard)
+            border: 2px solid var(--dark-hard)
+            &:hover
+                background: var(--dark-medium)
+                border: 2px solid var(--dark-light)
+                color: var(--dark-hard)
     &-light
         background: var(--light-medium)
         border: 2px solid var(--light-light)
@@ -445,6 +549,20 @@ li
             background: var(--light-hard)
             border: 2px solid var(--gray-medium)
             color: var(--gray-medium)
+        &-medium
+            background: var(--light-medium)
+            border: 2px solid var(--light-medium)
+            &:hover
+                background: var(--light-hard)
+                border: 2px solid var(--light-light)
+                color: var(--light-light)
+        &-hard
+            background: var(--light-hard)
+            border: 2px solid var(--light-hard)
+            &:hover
+                background: var(--light-medium)
+                border: 2px solid var(--light-light)
+                color: var(--light-hard)
     &-gray
         background: var(--gray-medium)
         border: 2px solid var(--gray-light)
@@ -452,6 +570,20 @@ li
             background: var(--gray-hard)
             border: 2px solid var(--dark-medium)
             color: var(--gray-light)
+        &-medium
+            background: var(--gray-medium)
+            border: 2px solid var(--gray-medium)
+            &:hover
+                background: var(--gray-hard)
+                border: 2px solid var(--gray-light)
+                color: var(--gray-light)
+        &-hard
+            background: var(--gray-hard)
+            border: 2px solid var(--gray-hard)
+            &:hover
+                background: var(--gray-medium)
+                border: 2px solid var(--gray-light)
+                color: var(--gray-hard)
 .dropdown 
     float: left;
     overflow: hidden;
@@ -546,8 +678,6 @@ li
         padding 20px !important
         width  100% !important
 .close
-    background: none
-    border none
     margin-top: -15px
     color: #aaaaaa
     float: right
@@ -630,6 +760,9 @@ li
             background: var(--gray-medium)
         &-hard
             background: var(--gray-hard)
+    &-none
+        background: none !important
+        box-shadow: none !important
 /***************************
             Text color
 ***************************/
@@ -704,8 +837,6 @@ li
 .margin
     &-left
         margin-left: 15px
-    &left-lg
-        margin-left: 30px !important
     &-right
         margin-right: 15px
     &-bottom
@@ -737,11 +868,6 @@ hr
     border-bottom: 1px solid var(--gray-medium)
     box-shadow: 0 10px 10px -15px #333
     margin: -50px auto 10px 
-/***************************
-            Formulario
-***************************/
-label
-    width 100%
 .form-input
     width 100%
     height: 40px
@@ -756,6 +882,26 @@ label
         transition: .35s linear !important
         border-bottom: 2px solid rgba(0, 153, 204, 0.3) !important
         box-shadow: 2px 2px 4px 1px rgba(0, 153, 204, 0.2)
-.img-fluid
-    max-width: 100%
-    height: auto
+.img
+    &-fluid
+        max-width: 100%
+        height: auto
+    &-peli 
+        width 50% !important
+        margin: 0 auto 
+/*****************************************************************************************
+                                        Tipografías
+*****************************************************************************************/
+h1, h2, h3, h4, h5, h6
+    margin-top: 0
+.display-1
+    font-weight: 700 !important
+    font-size: 64px !important
+.display-2
+    font-weight: 700 !important
+    font-size: 54px !important
+.display-3
+    font-weight: 700 !important
+    font-size: 44px !important
+.upper-case
+    text-transform: uppercase
